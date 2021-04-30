@@ -1,0 +1,64 @@
+.track{}
+
+.container{
+  //display: flex;
+  //align-items: center;
+  //grid-template-columns: 65px 1fr 38px 50px 50px;
+  //grid-template-rows: 60px;
+  max-width: 872px;
+  //background-color: bisque;
+
+
+  padding: 13px 20px 13px 24px;
+
+  display: grid;
+  grid-template-columns: 40px 1fr 25px 70px 60px;
+  justify-content: space-between;
+  // justify-items: start;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+
+  @media (max-width: 1600px) {
+    padding: 9px 20px 13px 17px;
+    grid-template-columns: 33px 1fr 25px 65px 50px;
+  }
+
+  &:hover {
+    background-color: #F2F2F2;
+  }
+
+  &.active {
+    background-color: #F2F2F2;
+  }
+}
+
+.play{
+  margin: auto;
+}
+
+.name{
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #4B4B4B;
+  margin: 0;
+}
+
+.duration{
+  font-size: 18px;
+  color: #5F5A5A;
+  justify-self: end;
+}
+
+.popupMenu{
+  width: 28px;
+  height: 7px;
+  justify-self: end;
+}
+
+.like{
+  width: 23px;
+  height: 22px;
+  justify-self: end;
+}
