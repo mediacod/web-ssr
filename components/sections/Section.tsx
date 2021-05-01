@@ -6,7 +6,7 @@ import PlaylistItem from "../playlistItem";
 
 const albums = [
     {id: 1, title: 'Желтый колосок', count: 14, url: '', 'color': '#68b463'},
-    {id: 2, title: 'Желтый колосок', count: 10, url: 'http://studiosib.ru/storage/album_images/dEiYe3AOcfqnQCCzHMZnel1YihzFPkZ0Gjffscji.jpeg'},
+    {id: 2, title: 'Желтый колосок', count: 10, url: 'http://studiosib.ru/storage/album_images/dEiYe3AOcfqnQCCzHMZnel1YihzFPkZ0Gjffscji1.jpeg'},
     {id: 3, title: 'Песню новую пою', count: 14, url: 'http://studiosib.ru/storage/album_images/UNc2CCM4kwreHCd937nMkWJHCad5G7KnoxLS8xQQ.jpeg'},
     {id: 4, title: 'Бог не ошибается', count: 13, url: 'http://studiosib.ru/storage/album_images/r56ne0sHkHatRVXv65R16PdjCnYtEmjQEVM7r5BA.png'},
     {id: 5, title: 'Все будет иначе', count: 5, url: 'http://studiosib.ru/storage/album_images/r6K1dlgNj8LNsn7A16qtw8ug67IZsiFJDcwdUk2r.png'},

@@ -1,12 +1,13 @@
+import Link from 'next/dist/client/link';
 import React from 'react';
 import MIcons from '../MIcons';
 
 const navList = [
-    {name: 'home', title: 'Главная'},
-    {name: 'playlists', title: 'Плейлисты'},
-    {name: 'search', title: 'Поиск'},
-    {name: 'user', title: 'Личный кабинет'},
-    {name: 'lib', title: 'Меню'},
+    {name: 'home', title: 'Главная', link: '/'},
+    {name: 'playlists', title: 'Плейлисты', link: '/playlist'},
+    {name: 'search', title: 'Поиск', link: '/search'},
+    {name: 'user', title: 'Личный кабинет', link: '/favorite'},
+    {name: 'lib', title: 'Меню', link: '/menu'},
 ]
 
 const NavMobile = () => {
@@ -15,10 +16,12 @@ const NavMobile = () => {
             <div className={'navContainer'}>
                 {navList.map(n => {
                     return(
-                        <div className={'navItem'}>
-                            <MIcons name={n.name} color={'#4B4B4B'} size={'24px'} />
-                            <p className={'navTitle'}>{n.title}</p>
-                        </div> )
+                        <Link href={n.link}>
+                            <a className={'navItem'}>
+                                <MIcons name={n.name} color={'#4B4B4B'} size={'24px'} />
+                                <p className={'navTitle'}>{n.title}</p>
+                            </a>
+                        </Link>)
                 })}
             </div>
 
@@ -27,7 +30,7 @@ const NavMobile = () => {
                 grid-area: ct;
                 position: fixed;
                 bottom: 0;
-                
+
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -36,14 +39,14 @@ const NavMobile = () => {
                 padding: 0 15px;
                 background: #fff;
               }
-              
+
               .navItem{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 min-width: 50px;
               }
-              
+
               .navTitle{
                 font-size: 7px;
                 font-weight: 400;

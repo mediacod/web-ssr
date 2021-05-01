@@ -1,27 +1,23 @@
 .track{}
 
 .container{
-  //display: flex;
-  //align-items: center;
-  //grid-template-columns: 65px 1fr 38px 50px 50px;
-  //grid-template-rows: 60px;
-  max-width: 872px;
-  //background-color: bisque;
-
-
-  padding: 13px 20px 13px 24px;
-
+  position: relative;
   display: grid;
   grid-template-columns: 40px 1fr 25px 70px 60px;
   justify-content: space-between;
-  // justify-items: start;
   align-items: center;
+  max-width: 872px;
+  padding: 13px 20px 13px 24px;
   cursor: pointer;
-  position: relative;
 
   @media (max-width: 1600px) {
     padding: 9px 20px 13px 17px;
     grid-template-columns: 33px 1fr 25px 65px 50px;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr 25px 25px;
+    padding: 10px 15px;
   }
 
   &:hover {
@@ -35,6 +31,10 @@
 
 .play{
   margin: auto;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 }
 
 .name{
@@ -43,18 +43,29 @@
   line-height: 21px;
   color: #4B4B4B;
   margin: 0;
+  padding-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .duration{
   font-size: 18px;
   color: #5F5A5A;
   justify-self: end;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 }
 
 .popupMenu{
-  width: 28px;
-  height: 7px;
+  //width: 28px;
   justify-self: end;
+
+  @media (max-width: 500px) {
+    transform: rotate(90deg);
+  }
 }
 
 .like{

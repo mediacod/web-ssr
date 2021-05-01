@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const MoblieHeader = () => {
+const MobileHeader = () => {
     return (
         <>
             <div className={'headerContainer'}>
@@ -25,7 +25,7 @@ const MoblieHeader = () => {
                 padding: 16px;
                 
                 background: linear-gradient(90deg, #456380 0%, #AED5FA 100%);
-                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
               }
               
             `}</style>
@@ -33,4 +33,4 @@ const MoblieHeader = () => {
     );
 };
 
-export default MoblieHeader;
+export default MobileHeader;

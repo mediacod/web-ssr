@@ -5,7 +5,6 @@ import Section from "./Section";
 const Sections: React.FC = () => {
     return (
         <div className={'sectionsContainer'}>
-            {/*<SectionNav />*/}
             <Section title={'Музыка'}/>
             <Section title={'Музыка'}/>
             <Section title={'Музыка'}/>

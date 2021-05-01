@@ -4,21 +4,25 @@ import styles from "../styles/Track.module.scss"
 import Icons from "./Icons";
 
 interface Track {
-    track: ITrack
+    track: ITrack;
+    isMobile?: boolean;
 }
 
-const Track: React.FC<Track> = ({track}) => {
+const Track: React.FC<Track> = ({track, isMobile}) => {
 
     const isOpenMenu = false;
     return (
         <div>
             <div className={styles.container} >
-                {/*<div className={styles.trackPlay} />*/}
-                <Icons name={'playItem'} size={'20px'} color={'#B1AFAF'}/>
+                {!isMobile &&  <div className={styles.play}>
+                    <Icons name={'playItem'} size={'20px'} color={'#B1AFAF'}/>
+                </div>}
                 <p className={styles.name}>{track.name}</p>
                 <Icons className={styles.like} name={'like'} color={'#B1AFAF'} size={'20px'}/>
-                <span className={styles.duration}>{track.duration ? track.duration : null}</span>
-                <Icons className={styles.popupMenu} name={'popupMenu'} color={'#B1AFAF'} size={'20px'}/>
+                {!isMobile && <span className={styles.duration}>{track.duration ? track.duration : null}</span>}
+                <div className={styles.popupMenu}>
+                    <Icons name={'popupMenu'} color={'#B1AFAF'} size={isMobile ? '13px' : '20px' }/>
+                </div>
 
 
                 {isOpenMenu && <>
