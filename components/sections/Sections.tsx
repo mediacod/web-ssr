@@ -9,8 +9,6 @@ interface page {
 
 const Sections: React.FC<{ page }> = (page) => {
 
-    console.log(page.sections)
-
     return (
         <div className={'sectionsContainer'}>
             {/*{page.sections.map(s => {*/}

@@ -5,7 +5,7 @@ import {setPage} from "../action-creators/page";
 
 
 export function* pageSagaWatcher() {
-    yield takeEvery(PageActionTypes.GET_PAGE, sagaGetList)
+    // yield takeEvery(PageActionTypes.GET_PAGE, sagaGetList)
     // yield takeEvery(PageActionTypes., sagaSearch)
 }
 
