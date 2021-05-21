@@ -1,13 +1,24 @@
 import React from 'react';
 import { SectionNav } from '../nav/Nav';
 import Section from "./Section";
+import {IPage} from "../../types/page";
 
-const Sections: React.FC = () => {
+interface page {
+    sections: IPage | []
+}
+
+const Sections: React.FC<{ page }> = (page) => {
+
+    console.log(page.sections)
+
     return (
         <div className={'sectionsContainer'}>
-            <Section title={'Музыка'}/>
-            <Section title={'Музыка'}/>
-            <Section title={'Музыка'}/>
+            {/*{page.sections.map(s => {*/}
+            {/*    <Section title={s.nameSection} key={s.nameSection } cells={s.cells}/>*/}
+            {/*})}*/}
+            {/*<Section title={'Музыка'}/>*/}
+            {/*<Section title={'Музыка'}/>*/}
+            {/*<Section title={'Музыка'}/>*/}
         </div>
     );
 };

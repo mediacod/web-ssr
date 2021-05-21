@@ -3,6 +3,7 @@ import AlbumItem from "../albumItem";
 import styles from "../../styles/Section.module.scss"
 import useCalcColumn from "../../hooks/useCalcColumn";
 import PlaylistItem from "../playlistItem";
+import {ICells} from "../../types/page";
 
 const albums = [
     {id: 1, title: 'Желтый колосок', count: 14, url: '', 'color': '#68b463'},
@@ -18,10 +19,12 @@ const albums = [
     {id: 8, title: 'Я хочу с Тобой поговорить', count: 14, url: 'http://studiosib.ru/storage/album_images/UNc2CCM4kwreHCd937nMkWJHCad5G7KnoxLS8xQQ.jpeg'},
 ]
 
-const Section: React.FC<{ title: string }> = ({title}) => {
+const Section: React.FC<{ title: string, cells: ICells[] }> = ({title, cells}) => {
 
     const myRef = useRef()
     const { style, column, albumWidth } = useCalcColumn(myRef)
+
+    console.log(cells)
 
     return (
         <div className={styles.sectionContainer}>
