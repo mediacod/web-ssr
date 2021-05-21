@@ -7,7 +7,6 @@ const Congress = () => {
     return (
         <MainLayout>
             <SectionLayout>
-                <Sections />
             </SectionLayout>
         </MainLayout>
     );

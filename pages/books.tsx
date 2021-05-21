@@ -7,7 +7,6 @@ const Books = () => {
     return (
         <MainLayout>
             <SectionLayout>
-                <Sections />
             </SectionLayout>
         </MainLayout>
     );

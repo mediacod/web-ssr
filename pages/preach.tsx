@@ -7,7 +7,6 @@ const Preach = () => {
     return (
         <MainLayout>
             <SectionLayout>
-                <Sections />
             </SectionLayout>
         </MainLayout>
     );

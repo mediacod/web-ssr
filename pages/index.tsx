@@ -7,7 +7,6 @@ const Index = () => {
     return (
         <MainLayout>
             <SectionLayout>
-                <Sections />
             </SectionLayout>
         </MainLayout>
     );
